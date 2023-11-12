@@ -14,7 +14,7 @@
 
   { "name": "BadBoyHalo", "twitch": "badboyhalo", "team": "Blue" },
   { "name": "Tubbo", "twitch": "tubbo", "team": "Blue" },
-  { "name": "Pac", "twitch": ["tazercraft", "paqitw"], "team": "Blue" },
+  { "name": "Pac", "twitch": ["tazercraft", "paqitw", "osulive"], "team": "Blue" },
   { "name": "AyPierre", "twitch": "aypierre", "team": "Blue" },
   { "name": "Tina", "twitch": "tinakitten", "team": "Blue" },
   { "name": "Nihachu", "twitch": "nihachu", "team": "Blue" },
