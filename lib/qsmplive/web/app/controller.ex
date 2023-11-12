@@ -1,6 +1,6 @@
 defmodule Qsmplive.Web.Controller do
   alias Qsmplive.Api.Controller, as: Api
-
+  alias Qsmplive.Web.Html, as: View
   require Logger
   use Plug.Router
 
@@ -34,17 +34,18 @@ defmodule Qsmplive.Web.Controller do
     {status, resp} =
       with {:ok, all_members} <- Api.get_all_members(),
            {:ok, online_members} <- Api.get_online_members(all_members) do
-        members = merge_members(all_members, online_members) 
+        members =
+          merge_members(all_members, online_members)
           |> Enum.sort_by(&{&1["team"], !&1["is_live"], &1["name"]})
-
-        {200, members}
+        
+        {200, View.index("QSMPLive")}
       else
         {:error, error} ->
           Logger.error("Error: #{inspect(error)}")
           {500, "oops"}
       end
 
-    send_resp(conn, status, Poison.encode!(resp))
+    send_resp(conn, status, resp)
   end
 
   match _ do
