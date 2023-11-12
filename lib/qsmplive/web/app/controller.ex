@@ -13,19 +13,22 @@ defmodule Qsmplive.Web.Controller do
   plug(:dispatch)
 
   get "/" do
-    Api.get_all_members()
-    |> case do
-      {:ok, json} ->
-        json
-        |> Poison.encode()
-        |> case do
-          {:ok, text} -> send_resp(conn, 200, text)
-          {:error, error} -> send_resp(conn, 400, error)
-        end
+    {status, resp} =
+      with {:ok, all_members} <- Api.get_all_members(),
+           {:ok, online_members} <- Api.get_online_members(all_members) do
 
-      {:error, err} ->
-        send_resp(conn, 400, err)
-    end
+
+        {200, %{
+          "all_members" => all_members,
+          "online_members" => online_members
+        }}
+      else
+        {:error, error} ->
+          Logger.error("Error: #{inspect(error)}")
+          {500, "oops"}
+      end
+
+    send_resp(conn, status, Poison.encode!(resp))
   end
 
   match _ do

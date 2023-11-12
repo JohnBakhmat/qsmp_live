@@ -24,7 +24,9 @@ defmodule Qsmplive.MixProject do
     [
       {:poison, "~> 5.0.0"},
       {:bandit, "~> 1.0-pre"},
-      {:plug, "~> 1.14"}
+      {:plug, "~> 1.14"},
+      {:httpoison, "~> 2.2.0"},
+      {:dotenvy, "~> 0.8.0"}
     ]
   end
 end
