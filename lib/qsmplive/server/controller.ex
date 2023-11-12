@@ -11,6 +11,8 @@ defmodule Qsmplive.Api.Controller do
   def get_online_members(members) do
     members
     |> Enum.map(fn member -> member["twitch"] end)
+    |> List.flatten()
+    |> Enum.uniq()
     |> get_live_status()
   end
 
