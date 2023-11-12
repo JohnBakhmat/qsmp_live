@@ -1,7 +1,44 @@
 [
-    {
-        "name":"Philza",
-        "twitch":"philza",
-        "team": "Red"
-    }
+  { "name": "Philza", "twitch": "philza", "team": "Red" },
+  { "name": "Foolish", "twitch": "foolish", "team": "Red" },
+  { "name": "Slimecicle", "twitch": "slimecicle", "team": "Red" },
+  { "name": "Cellbit", "twitch": "cellbit", "team": "Red" },
+  { "name": "Jaiden", "twitch": "jaidenanimations", "team": "Red" },
+  { "name": "Baghera Jones", "twitch": "bagherajones", "team": "Red" },
+  { "name": "Carre", "twitch": "carreraaa", "team": "Red" },
+  { "name": "Wilbur Soot", "twitch": "wilbursoot", "team": "Red" },
+  { "name": "Felps", "twitch": "felps", "team": "Red" },
+  { "name": "German", "twitch": "germangarmendia", "team": "Red" },
+  { "name": "Willyrex", "twitch": "willyrex", "team": "Red" },
+  { "name": "Vegetta", "twitch": "vegetta777", "team": "Red" },
+
+  { "name": "BadBoyHalo", "twitch": "badboyhalo", "team": "Blue" },
+  { "name": "Tubbo", "twitch": "tubbo", "team": "Blue" },
+  { "name": "Pac", "twitch": ["tazercraft", "paqitw"], "team": "Blue" },
+  { "name": "AyPierre", "twitch": "aypierre", "team": "Blue" },
+  { "name": "Tina", "twitch": "tinakitten", "team": "Blue" },
+  { "name": "Nihachu", "twitch": "nihachu", "team": "Blue" },
+  { "name": "Luzu", "twitch": "luzu", "team": "Blue" },
+  { "name": "Mariana", "twitch": "elmariana", "team": "Blue" },
+  { "name": "Lenay", "twitch": "lenay", "team": "Blue" },
+  { "name": "Missa", "twitch": "missasinfonia", "team": "Blue" },
+  { "name": "Rivers", "twitch": "rivers_gg", "team": "Blue" },
+  { "name": "Polispol", "twitch": "polispol1", "team": "Blue" },
+
+  { "name": "Etoiles", "twitch": "etoiles", "team": "Green" },
+  { "name": "Fit", "twitch": "fitmc", "team": "Green" },
+  {
+    "name": "Quackity",
+    "twitch": ["quackity", "quackitytoo"],
+    "team": "Green"
+  },
+  { "name": "Roier", "twitch": "roier", "team": "Green" },
+  { "name": "Ironmouse", "twitch": "ironmouse", "team": "Green" },
+  { "name": "Bagi", "twitch": "bagi", "team": "Green" },
+  { "name": "Mike", "twitch": "tazercraft", "team": "Green" },
+  { "name": "Forever", "twitch": "forever", "team": "Green" },
+  { "name": "Maximus", "twitch": "agentemaxo", "team": "Green" },
+  { "name": "Kameto", "twitch": "kamet0", "team": "Green" },
+  { "name": "Rubius", "twitch": "rubius", "team": "Green" },
+  { "name": "Antoine Daniel", "twitch": "antoinedaniel", "team": "Green" }
 ]
