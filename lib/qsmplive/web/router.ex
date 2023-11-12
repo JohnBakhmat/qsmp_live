@@ -5,7 +5,7 @@ defmodule Qsmplive.Web.Router do
     require Logger
   
     plug(Plug.Logger)
-    plug(Plug.Static, at: "/static/", from: {:qsmplive, "public/"})
+    plug(Plug.Static, at: "/static/", from: {:qsmplive, "priv/"})
     plug(:match)
     plug(:dispatch)
 

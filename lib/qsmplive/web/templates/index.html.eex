@@ -1,0 +1,6 @@
+<main>
+  <%= for member <- members do %>
+  <h1><%= member["name"] %></h1>
+  <img src='/static/icons/<%= member["icon"] %>.webp'/>
+  <% end %>
+</main>
