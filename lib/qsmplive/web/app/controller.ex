@@ -26,7 +26,7 @@ defmodule Qsmplive.Web.Controller do
           String.downcase(channel) in lowercase_online
         end
 
-      Map.put(member, "is_live", is_online) |> dbg()
+      Map.put(member, "is_live", is_online)
     end)
   end
 
@@ -35,7 +35,7 @@ defmodule Qsmplive.Web.Controller do
       with {:ok, all_members} <- Api.get_all_members(),
            {:ok, online_members} <- Api.get_online_members(all_members) do
         members = merge_members(all_members, online_members) 
-          |> Enum.sort_by(&{&1["is_live"], &1["team"], &1["name"]}, :desc)
+          |> Enum.sort_by(&{&1["team"], !&1["is_live"], &1["name"]})
 
         {200, members}
       else
