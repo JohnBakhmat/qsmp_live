@@ -26,3 +26,5 @@ qsmplive-*.tar
 /tmp/
 
 .env
+
+priv/styles.css
