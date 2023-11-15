@@ -568,8 +568,24 @@ video {
   }
 }
 
+.grid {
+  display: grid;
+}
+
 .w-24 {
   width: 6rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .rounded-md {
