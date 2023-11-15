@@ -10,7 +10,7 @@
       </h2>
       <%= for member <- team do %>
       <a 
-      href='<%= "https://twitch.tv/#{member["twitch"]}"%>'
+      href='https://twitch.tv/<%= member["twitch"] %>'
       class="flex flex-col text-2xl place-items-center">
         <%= if member["is_live"] do %>
         <img

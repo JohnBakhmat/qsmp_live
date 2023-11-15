@@ -16,7 +16,7 @@
   { "name": "Tubbo", "twitch": "tubbo", "team": "Blue" },
   {
     "name": "Pac",
-    "twitch": ["tazercraft", "paqitw", "osulive"],
+    "twitch": ["paqitw", "tazercraft", "piratesoftware"],
     "team": "Blue"
   },
   { "name": "AyPierre", "twitch": "aypierre", "team": "Blue" },

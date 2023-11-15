@@ -16,17 +16,25 @@ defmodule Qsmplive.Web.Controller do
     lowercase_online = Enum.map(online, fn x -> String.downcase(x) end)
 
     Enum.map(all, fn member ->
-      channel = member["twitch"]
+      channels_one_or_more = member["twitch"]
 
-      # The channel can be string or list of strings 
-      is_online =
-        if is_list(channel) do
-          Enum.any?(channel, fn x -> String.downcase(x) in lowercase_online end)
+      channels =
+        if is_list(channels_one_or_more) do
+          channels_one_or_more
         else
-          String.downcase(channel) in lowercase_online
+          [channels_one_or_more]
         end
 
-      Map.put(member, "is_live", is_online)
+      {is_live, channel} =
+        Enum.find(channels, fn x -> String.downcase(x) in lowercase_online end)
+        |> case do
+          nil -> {false, List.first(channels)}
+          channel -> {true, channel}
+        end
+
+      member
+      |> Map.put("is_live", is_live)
+      |> Map.put("twitch", channel)
     end)
   end
 
@@ -38,7 +46,7 @@ defmodule Qsmplive.Web.Controller do
           merge_members(all_members, online_members)
           |> Enum.sort_by(&{&1["team"], !&1["is_live"], &1["name"]})
 
-        teams = Enum.chunk_by(members, &(&1["team"])) |> Enum.to_list
+        teams = Enum.chunk_by(members, & &1["team"]) |> Enum.to_list()
 
         page = View.index("QSMPLive", teams)
         {200, page}
