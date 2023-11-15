@@ -10,19 +10,22 @@ defmodule Qsmplive.Web.Html do
   ])
 
   EEx.function_from_file(:def, :index_html, "#{@template_dir}index.html.eex", [
-    :members
+    :teams
   ])
 
-  def index(title, members) do
-    members
-    |> Enum.map(fn member ->
-      Map.put(
-        member,
-        "icon",
-        member["name"]
-        |> String.downcase()
-        |> String.replace(" ", "-")
-      )
+  def index(title, teams) do
+    teams
+    |> Enum.map(fn team ->
+      team
+      |> Enum.map(fn member ->
+        Map.put(
+          member,
+          "icon",
+          member["name"]
+          |> String.downcase()
+          |> String.replace(" ", "-")
+        )
+      end)
     end)
     |> index_html()
     |> root_html(title)

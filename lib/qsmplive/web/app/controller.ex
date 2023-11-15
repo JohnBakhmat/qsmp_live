@@ -38,7 +38,9 @@ defmodule Qsmplive.Web.Controller do
           merge_members(all_members, online_members)
           |> Enum.sort_by(&{&1["team"], !&1["is_live"], &1["name"]})
 
-        page = View.index("QSMPLive", members)
+        teams = Enum.chunk_by(members, &(&1["team"])) |> Enum.to_list
+
+        page = View.index("QSMPLive", teams)
         {200, page}
       else
         {:error, error} ->

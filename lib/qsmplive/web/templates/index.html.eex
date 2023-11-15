@@ -1,20 +1,32 @@
-<main class="w-screen">
-  <div class="grid grid-cols-5 w-full">
-    <%= for member <- members do %>
-    <div>
-      <h1><%= member["name"] %></h1>
-      <%= if member["is_live"] do %>
-      <img
-        class="rounded-md w-24"
-        src='/static/icons/<%= member["icon"] %>.webp'
-      />
-      <% else %>
-      <img
-        class="grayscale rounded-md w-24"
-        src='/static/icons/<%= member["icon"] %>.webp'
-      />
-            <% end %>
-    </div> 
+<div class="w-screen h-screen flex flex-col place-items-center">
+  <h1 class="text-4xl">QSMP Live</h1>
+  <h3 class="text-2xl">Who is live on QSMP</h3>
+
+  <section class="grid grid-cols-2 place-items-center">
+    <%= for team <- teams do %>
+    <div class="w-full p-5 grid grid-cols-5 gap-5">
+      <h2 class="w-full col-span-full text-2xl text-center">
+        <%= "#{ List.first(team)["team"]} Team" %>
+      </h2>
+      <%= for member <- team do %>
+      <a 
+      href='<%= "https://twitch.tv/#{member["twitch"]}"%>'
+      class="flex flex-col text-2xl place-items-center">
+        <%= if member["is_live"] do %>
+        <img
+          class="rounded-md w-24"
+          src='/static/icons/<%= member["icon"] %>.webp'
+        />
+        <% else %>
+        <img
+          class="grayscale rounded-md w-24"
+          src='/static/icons/<%= member["icon"] %>.webp'
+        />
+        <% end %>
+        <h1><%= member["name"] %></h1>
+      </a>
+      <% end %>
+    </div>
     <% end %>
-  </div>
-</main>
+  </section>
+</div>
