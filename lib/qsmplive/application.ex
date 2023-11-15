@@ -9,6 +9,7 @@ defmodule Qsmplive.Application do
       {Bandit, scheme: :http, plug: Qsmplive.Web.Router, port: port},
       {Qsmplive.Api.Endpoint, nil}
     ]
+
     opts = [strategy: :one_for_one, name: Qsmplive.Supervisor]
     Supervisor.start_link(children, opts)
   end
