@@ -11,8 +11,9 @@
     <script defer phx-track-static type="text/javascript" src="/static/app.js"></script>
   </head>
   <body hx-boost="true">
-    <main class="container">
+   
       <%= inner_content %>
-    </main>
+
+    </div class="hidden decoration-blue-500 decoration-red-500 text-blue-500 text-red-500 border-blue-500 border-red-500">
   </body>
 </html>
