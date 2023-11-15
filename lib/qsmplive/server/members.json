@@ -29,20 +29,20 @@
   { "name": "Rivers", "twitch": "rivers_gg", "team": "Blue" },
   { "name": "Polispol", "twitch": "polispol1", "team": "Blue" },
 
-  { "name": "Etoiles", "twitch": "etoiles", "team": "Green" },
-  { "name": "Fit", "twitch": "fitmc", "team": "Green" },
+  { "name": "Etoiles", "twitch": "etoiles", "team": "Red" },
+  { "name": "Fit", "twitch": "fitmc", "team": "Blue" },
   {
     "name": "Quackity",
     "twitch": ["quackity", "quackitytoo"],
-    "team": "Green"
+    "team": "Blue"
   },
-  { "name": "Roier", "twitch": "roier", "team": "Green" },
-  { "name": "Ironmouse", "twitch": "ironmouse", "team": "Green" },
-  { "name": "Bagi", "twitch": "bagi", "team": "Green" },
-  { "name": "Mike", "twitch": "tazercraft", "team": "Green" },
-  { "name": "Forever", "twitch": "forever", "team": "Green" },
-  { "name": "Maximus", "twitch": "agentemaxo", "team": "Green" },
-  { "name": "Kameto", "twitch": "kamet0", "team": "Green" },
-  { "name": "Rubius", "twitch": "rubius", "team": "Green" },
-  { "name": "Antoine Daniel", "twitch": "antoinedaniel", "team": "Green" }
+  { "name": "Roier", "twitch": "roier", "team": "Red" },
+  { "name": "Ironmouse", "twitch": "ironmouse", "team": "Red" },
+  { "name": "Bagi", "twitch": "bagi", "team": "Blue" },
+  { "name": "Mike", "twitch": "tazercraft", "team": "Blue" },
+  { "name": "Forever", "twitch": "forever", "team": "Blue" },
+  { "name": "Maximus", "twitch": "agentemaxo", "team": "Red" },
+  { "name": "Kameto", "twitch": "kamet0", "team": "Blue" },
+  { "name": "Rubius", "twitch": "rubius", "team": "Red" },
+  { "name": "Antoine Daniel", "twitch": "antoinedaniel", "team": "Red" }
 ]
