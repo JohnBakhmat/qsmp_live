@@ -534,8 +534,16 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
 .col-span-full {
   grid-column: 1 / -1;
+}
+
+.row-span-5 {
+  grid-row: span 5 / span 5;
 }
 
 .flex {
@@ -566,12 +574,16 @@ video {
   width: 100vw;
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.grid-cols-10 {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+.grid-cols-\[subgrid\] {
+  grid-template-columns: subgrid;
+}
+
+.grid-rows-\[subgrid\] {
+  grid-template-rows: subgrid;
 }
 
 .flex-col {
